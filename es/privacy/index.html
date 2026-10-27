@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Aviso de privacidad · SEEN</title>
     <meta name="description" content="Cómo trata el sitio de SEEN la información: sin cookies, sin analítica, sin cuentas." />
@@ -20,6 +20,8 @@
     <link rel="alternate" hreflang="x-default" href="https://seen.creova.one/privacy/" />
     <link rel="canonical" href="https://seen.creova.one/es/privacy/" />
     <meta property="og:url" content="https://seen.creova.one/es/privacy/" />
+    <link rel="preload" href="../../fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="../../styles.css" />
   </head>
   <body>
@@ -37,7 +39,7 @@
           <nav aria-label="Idioma">
             <ul class="pill"><li><a href="../../privacy/" lang="en" hreflang="en" aria-label="English">EN</a></li><li><a href="../../fr/privacy/" lang="fr" hreflang="fr" aria-label="Français">FR</a></li><li><span aria-current="true" lang="es" aria-label="Español">ES</span></li></ul>
           </nav>
-          <a class="btn btn-dark btn-small" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a>
+          <a class="btn btn-primary btn-small" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a>
         </div>
         <nav class="main-nav" aria-label="Principal">
           <ul class="nav">

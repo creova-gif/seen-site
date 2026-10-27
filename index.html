@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>SEEN: You're seen in the app</title>
     <meta name="description" content="SEEN is a home for community stories in English, French and Spanish. Read and listen to stories, follow creators, explore collections and find funding for storytellers." />
@@ -20,6 +20,8 @@
     <link rel="alternate" hreflang="x-default" href="https://seen.creova.one/" />
     <link rel="canonical" href="https://seen.creova.one/" />
     <meta property="og:url" content="https://seen.creova.one/" />
+    <link rel="preload" href="fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -37,7 +39,7 @@
           <nav aria-label="Language">
             <ul class="pill"><li><span aria-current="true" lang="en" aria-label="English">EN</span></li><li><a href="fr/" lang="fr" hreflang="fr" aria-label="Français">FR</a></li><li><a href="es/" lang="es" hreflang="es" aria-label="Español">ES</a></li></ul>
           </nav>
-          <a class="btn btn-dark btn-small" href="https://seen-sigma-eight.vercel.app" rel="noopener">Try the demo app</a>
+          <a class="btn btn-primary btn-small" href="https://seen-sigma-eight.vercel.app" rel="noopener">Try the demo app</a>
         </div>
         <nav class="main-nav" aria-label="Main">
           <ul class="nav">
@@ -52,21 +54,30 @@
     </header>
 
     <main id="main">
-      <section class="band band--dark hero" aria-labelledby="hero-title">
-        <div class="hero-art" aria-hidden="true"></div>
-        <div class="wrap hero-inner">
-          <p class="eyebrow">SEEN by CREOVA</p>
-          <h1 id="hero-title">You're seen in the app.</h1>
-          <p class="lead">SEEN is a home for community stories in English, French and Spanish. Read and listen to stories, follow the people who tell them, explore collections, and find funding for storytellers.</p>
-          <p class="actions">
-            <a class="btn btn-gold" href="https://seen-sigma-eight.vercel.app" rel="noopener">Try the demo app</a>
-            <a class="btn btn-ghost" href="#beta">See beta status</a>
-          </p>
-          <p class="note">The demo uses sample stories and sample accounts. What you create in it stays in your own browser.</p>
+      <section class="band band--black hero" aria-labelledby="hero-title">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">SEEN by CREOVA</p>
+            <h1 id="hero-title">You're <em>seen</em> in the app.</h1>
+            <p class="lead">SEEN is a home for community stories in English, French and Spanish. Read and listen to stories, follow the people who tell them, explore collections, and find funding for storytellers.</p>
+            <p class="actions">
+              <a class="btn btn-primary" href="https://seen-sigma-eight.vercel.app" rel="noopener">Try the demo app</a>
+              <a class="btn btn-ghost" href="#beta">See beta status</a>
+            </p>
+            <p class="note">The demo uses sample stories and sample accounts. What you create in it stays in your own browser.</p>
+          </div>
+          <figure class="hero-figure">
+            <div class="rings" aria-hidden="true"></div>
+            <img src="img/hero-portrait.jpg" alt="Two people posing close together in a studio portrait against a pale background, both smiling at the camera." width="533" height="800" decoding="async" />
+          </figure>
         </div>
       </section>
 
-      <section id="what" class="band band--beige" aria-labelledby="what-title">
+      <section class="band band--oxblood tagline-band" aria-label="SEEN by CREOVA">
+        <div class="wrap"><p class="tagline">Where stories live, where culture breathes.</p></div>
+      </section>
+
+      <section id="what" class="band band--black" aria-labelledby="what-title">
         <div class="wrap">
           <h2 id="what-title">What is SEEN?</h2>
           <div class="cards">
@@ -77,41 +88,41 @@
         </div>
       </section>
 
-      <section id="creators" class="band band--light" aria-labelledby="creators-title">
+      <section id="creators" class="band band--beige" aria-labelledby="creators-title">
         <div class="wrap split">
           <div>
             <h2 id="creators-title">For creators</h2>
             <p class="lead">Tell your story on your terms.</p>
             <p>Write and publish stories with image descriptions and content notes, so more people can take part. Your credit and your consent come first.</p>
+            <div class="panel panel--paper">
+              <h3>Before the beta opens, we are working on:</h3>
+              <ul><li>Permissions and credit for everyone who worked on a story</li><li>A way to challenge a credit</li><li>Privacy settings you control</li><li>Reporting, and removal of content that should come down</li></ul>
+            </div>
           </div>
-          <div class="panel panel--outline">
-            <h3>Before the beta opens, we are working on:</h3>
-            <ul><li>Permissions and credit for everyone who worked on a story</li><li>A way to challenge a credit</li><li>Privacy settings you control</li><li>Reporting, and removal of content that should come down</li></ul>
-          </div>
+          <figure class="photo"><img src="img/creators-laptop.jpg" alt="A woman laughing as she looks up from a laptop in a community lounge with bookshelves behind her." width="960" height="639" loading="lazy" decoding="async" /></figure>
         </div>
       </section>
 
-      <section id="viewers" class="band band--soft" aria-labelledby="viewers-title">
-        <div class="wrap split">
+      <section id="viewers" class="band band--surface" aria-labelledby="viewers-title">
+        <div class="wrap split split--flip">
           <div>
             <h2 id="viewers-title">For viewers</h2>
             <p class="lead">Open a story and start reading or listening.</p>
             <p>SEEN works on small phones and is built with access in mind.</p>
-          </div>
-          <div class="panel panel--outline">
             <ul><li>Interface in English, French and Spanish</li><li>A larger text option</li><li>Playback speed controls</li><li>Tools to report something that isn't right</li></ul>
           </div>
+          <figure class="photo"><img src="img/viewers-chess.jpg" alt="Two people talking over a chess board in a community room with full bookshelves." width="960" height="639" loading="lazy" decoding="async" /></figure>
         </div>
       </section>
 
-      <section id="beta" class="band band--dark" aria-labelledby="beta-title">
+      <section id="beta" class="band band--oxblood" aria-labelledby="beta-title">
         <div class="wrap">
           <h2 id="beta-title">Beta status</h2>
           <div class="beta-grid">
             <div class="panel panel--now">
-              <h3>Today</h3>
+              <h3><span class="live-dot" aria-hidden="true"></span>Today</h3>
               <p>The demo app is open to try. It runs on sample stories and sample accounts, and everything you do stays in your own browser.</p>
-              <p class="actions"><a class="btn btn-gold" href="https://seen-sigma-eight.vercel.app" rel="noopener">Try the demo app</a></p>
+              <p class="actions"><a class="btn btn-primary" href="https://seen-sigma-eight.vercel.app" rel="noopener">Try the demo app</a></p>
             </div>
             <div class="panel panel--plan">
               <h3>Planned: Beta 1, January 2027 (date to be confirmed)</h3>
@@ -122,11 +133,12 @@
         </div>
       </section>
 
-      <section id="about" class="band band--beige" aria-labelledby="about-title">
+      <section id="about" class="band band--black" aria-labelledby="about-title">
         <div class="wrap">
           <h2 id="about-title">About CREOVA</h2>
           <p class="lead">SEEN is built by CREOVA, the studio behind tools for cultural workers who refuse to compromise narrative integrity for algorithmic favor.</p>
-          <p class="actions"><a class="btn btn-dark" href="https://creova.one" rel="noopener">Visit creova.one</a></p>
+          <p class="actions"><a class="btn btn-ghost" href="https://creova.one" rel="noopener">Visit creova.one</a></p>
+          <p class="note">Photographs from CREOVA's community and event work.</p>
         </div>
       </section>
     </main>
