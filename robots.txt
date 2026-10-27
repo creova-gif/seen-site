@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seen.creova.one/sitemap.xml
