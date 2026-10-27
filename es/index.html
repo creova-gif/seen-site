@@ -33,7 +33,13 @@
     <header class="site-header">
       <div class="wrap header-row">
         <a class="wordmark" href="../es/" aria-label="SEEN">SEEN</a>
-        <nav aria-label="Principal">
+        <div class="header-tools">
+          <nav aria-label="Idioma">
+            <ul class="pill"><li><a href="../" lang="en" hreflang="en" aria-label="English">EN</a></li><li><a href="../fr/" lang="fr" hreflang="fr" aria-label="Français">FR</a></li><li><span aria-current="true" lang="es" aria-label="Español">ES</span></li></ul>
+          </nav>
+          <a class="btn btn-dark btn-small" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a>
+        </div>
+        <nav class="main-nav" aria-label="Principal">
           <ul class="nav">
             <li><a href="#what">Qué es SEEN</a></li>
             <li><a href="#creators">Para creadores</a></li>
@@ -46,65 +52,89 @@
     </header>
 
     <main id="main">
-      <section class="hero wrap" aria-labelledby="hero-title">
-        <p class="eyebrow">SEEN de CREOVA</p>
-        <h1 id="hero-title">Te ven en la app.</h1>
-        <p class="lead">SEEN es un lugar para historias comunitarias en español, inglés y francés. Lee y escucha historias, sigue a quienes las cuentan, explora colecciones y encuentra financiamiento para quienes cuentan historias.</p>
-        <p class="actions">
-          <a class="btn btn-primary" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a>
-          <a class="btn btn-secondary" href="#beta">Ver el estado de la beta</a>
-        </p>
-        <p class="note">La demo usa historias y cuentas de ejemplo. Lo que creas en ella se queda en tu propio navegador.</p>
-      </section>
-
-      <section id="what" class="wrap section" aria-labelledby="what-title">
-        <h2 id="what-title">¿Qué es SEEN?</h2>
-        <div class="cards">
-          <article class="card"><h3>Historias en tres idiomas</h3><p>Lee o escucha mundos de historias en español, inglés y francés, y cambia el idioma de la app cuando quieras.</p></article>
-          <article class="card"><h3>Creadores y colecciones</h3><p>Sigue a creadores, guarda historias y explora colecciones reunidas en torno a un tema.</p></article>
-          <article class="card"><h3>Financiamiento para narradores</h3><p>Consulta programas de financiamiento canadienses para narradores, cada uno enlazado a la página oficial de la entidad, y lleva el control de tus solicitudes.</p></article>
+      <section class="band band--dark hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="wrap hero-inner">
+          <p class="eyebrow">SEEN de CREOVA</p>
+          <h1 id="hero-title">Te ven en la app.</h1>
+          <p class="lead">SEEN es un lugar para historias comunitarias en español, inglés y francés. Lee y escucha historias, sigue a quienes las cuentan, explora colecciones y encuentra financiamiento para quienes cuentan historias.</p>
+          <p class="actions">
+            <a class="btn btn-gold" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a>
+            <a class="btn btn-ghost" href="#beta">Ver el estado de la beta</a>
+          </p>
+          <p class="note">La demo usa historias y cuentas de ejemplo. Lo que creas en ella se queda en tu propio navegador.</p>
         </div>
       </section>
 
-      <section id="creators" class="wrap section" aria-labelledby="creators-title">
-        <h2 id="creators-title">Para creadores</h2>
-        <p class="lead">Cuenta tu historia a tu manera.</p>
-        <p>Escribe y publica historias con descripciones de imágenes y avisos de contenido, para que más personas puedan participar. Tu crédito y tu consentimiento van primero.</p>
-        <h3>Antes de abrir la beta, estamos trabajando en:</h3>
-        <ul><li>Permisos y créditos para todas las personas que trabajaron en una historia</li><li>Una forma de impugnar un crédito</li><li>Ajustes de privacidad que tú controlas</li><li>Denuncias y retirada de contenido que deba retirarse</li></ul>
+      <section id="what" class="band band--beige" aria-labelledby="what-title">
+        <div class="wrap">
+          <h2 id="what-title">¿Qué es SEEN?</h2>
+          <div class="cards">
+            <article class="card"><h3>Historias en tres idiomas</h3><p>Lee o escucha mundos de historias en español, inglés y francés, y cambia el idioma de la app cuando quieras.</p></article>
+            <article class="card"><h3>Creadores y colecciones</h3><p>Sigue a creadores, guarda historias y explora colecciones reunidas en torno a un tema.</p></article>
+            <article class="card"><h3>Financiamiento para narradores</h3><p>Consulta programas de financiamiento canadienses para narradores, cada uno enlazado a la página oficial de la entidad, y lleva el control de tus solicitudes.</p></article>
+          </div>
+        </div>
       </section>
 
-      <section id="viewers" class="wrap section" aria-labelledby="viewers-title">
-        <h2 id="viewers-title">Para lectores</h2>
-        <p class="lead">Abre una historia y empieza a leer o escuchar.</p>
-        <p>SEEN funciona en teléfonos pequeños y está pensada con la accesibilidad en mente.</p>
-        <ul><li>Interfaz en español, inglés y francés</li><li>Una opción de texto más grande</li><li>Control de la velocidad de reproducción</li><li>Herramientas para denunciar algo que no está bien</li></ul>
+      <section id="creators" class="band band--light" aria-labelledby="creators-title">
+        <div class="wrap split">
+          <div>
+            <h2 id="creators-title">Para creadores</h2>
+            <p class="lead">Cuenta tu historia a tu manera.</p>
+            <p>Escribe y publica historias con descripciones de imágenes y avisos de contenido, para que más personas puedan participar. Tu crédito y tu consentimiento van primero.</p>
+          </div>
+          <div class="panel panel--outline">
+            <h3>Antes de abrir la beta, estamos trabajando en:</h3>
+            <ul><li>Permisos y créditos para todas las personas que trabajaron en una historia</li><li>Una forma de impugnar un crédito</li><li>Ajustes de privacidad que tú controlas</li><li>Denuncias y retirada de contenido que deba retirarse</li></ul>
+          </div>
+        </div>
       </section>
 
-      <section id="beta" class="wrap section" aria-labelledby="beta-title">
-        <h2 id="beta-title">Estado de la beta</h2>
-        <h3>Hoy</h3>
-        <p>La demo está abierta para probar. Funciona con historias y cuentas de ejemplo, y todo lo que haces se queda en tu propio navegador.</p>
-        <p class="actions"><a class="btn btn-primary" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a></p>
-        <h3>Previsto: beta 1, enero de 2027 (fecha por confirmar)</h3>
-        <ul><li>Cuentas que funcionan en todos tus dispositivos</li><li>Navegar sin cuenta (limitado)</li><li>Publicación para creadores</li><li>Transcripciones que los creadores pueden editar</li></ul>
-        <p class="note">Las fechas y el alcance pueden cambiar. Actualizaremos esta página cuando eso ocurra.</p>
+      <section id="viewers" class="band band--soft" aria-labelledby="viewers-title">
+        <div class="wrap split">
+          <div>
+            <h2 id="viewers-title">Para lectores</h2>
+            <p class="lead">Abre una historia y empieza a leer o escuchar.</p>
+            <p>SEEN funciona en teléfonos pequeños y está pensada con la accesibilidad en mente.</p>
+          </div>
+          <div class="panel panel--outline">
+            <ul><li>Interfaz en español, inglés y francés</li><li>Una opción de texto más grande</li><li>Control de la velocidad de reproducción</li><li>Herramientas para denunciar algo que no está bien</li></ul>
+          </div>
+        </div>
       </section>
 
-      <section id="about" class="wrap section" aria-labelledby="about-title">
-        <h2 id="about-title">Sobre CREOVA</h2>
-        <p>SEEN lo crea CREOVA, el estudio detrás de herramientas para trabajadores culturales que se niegan a sacrificar la integridad de sus relatos por el favor de los algoritmos.</p>
-        <p class="actions"><a class="btn btn-secondary" href="https://creova.one" rel="noopener">Visitar creova.one</a></p>
+      <section id="beta" class="band band--dark" aria-labelledby="beta-title">
+        <div class="wrap">
+          <h2 id="beta-title">Estado de la beta</h2>
+          <div class="beta-grid">
+            <div class="panel panel--now">
+              <h3>Hoy</h3>
+              <p>La demo está abierta para probar. Funciona con historias y cuentas de ejemplo, y todo lo que haces se queda en tu propio navegador.</p>
+              <p class="actions"><a class="btn btn-gold" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a></p>
+            </div>
+            <div class="panel panel--plan">
+              <h3>Previsto: beta 1, enero de 2027 (fecha por confirmar)</h3>
+              <ul><li>Cuentas que funcionan en todos tus dispositivos</li><li>Navegar sin cuenta (limitado)</li><li>Publicación para creadores</li><li>Transcripciones que los creadores pueden editar</li></ul>
+            </div>
+          </div>
+          <p class="note">Las fechas y el alcance pueden cambiar. Actualizaremos esta página cuando eso ocurra.</p>
+        </div>
+      </section>
+
+      <section id="about" class="band band--beige" aria-labelledby="about-title">
+        <div class="wrap">
+          <h2 id="about-title">Sobre CREOVA</h2>
+          <p class="lead">SEEN lo crea CREOVA, el estudio detrás de herramientas para trabajadores culturales que se niegan a sacrificar la integridad de sus relatos por el favor de los algoritmos.</p>
+          <p class="actions"><a class="btn btn-dark" href="https://creova.one" rel="noopener">Visitar creova.one</a></p>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap footer-row">
         <p>SEEN de CREOVA · <a href="https://creova.one" rel="noopener">creova.one</a></p>
-        <nav aria-label="Idioma">
-          <ul class="langs"><li><a href="../" lang="en" hreflang="en">English</a></li><li><a href="../fr/" lang="fr" hreflang="fr">Français</a></li><li><span aria-current="true" lang="es">Español</span></li></ul>
-        </nav>
-        <ul class="langs">
+        <ul class="footer-links">
           <li><a href="../es/terms/">Términos</a></li>
           <li><a href="../es/privacy/">Privacidad</a></li>
         </ul>

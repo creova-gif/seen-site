@@ -33,7 +33,13 @@
     <header class="site-header">
       <div class="wrap header-row">
         <a class="wordmark" href="../" aria-label="SEEN">SEEN</a>
-        <nav aria-label="Main">
+        <div class="header-tools">
+          <nav aria-label="Language">
+            <ul class="pill"><li><span aria-current="true" lang="en" aria-label="English">EN</span></li><li><a href="../fr/privacy/" lang="fr" hreflang="fr" aria-label="Français">FR</a></li><li><a href="../es/privacy/" lang="es" hreflang="es" aria-label="Español">ES</a></li></ul>
+          </nav>
+          <a class="btn btn-dark btn-small" href="https://seen-sigma-eight.vercel.app" rel="noopener">Try the demo app</a>
+        </div>
+        <nav class="main-nav" aria-label="Main">
           <ul class="nav">
             <li><a href="../#what">What is SEEN</a></li>
             <li><a href="../#creators">For creators</a></li>
@@ -46,7 +52,7 @@
     </header>
 
     <main id="main">
-      <article class="wrap section legal">
+      <article class="wrap legal">
         <p><a href="../">Back to SEEN</a></p>
         <h1>Privacy notice</h1>
         <p class="note">Last updated: <time datetime="2026-10-26">2026-10-26</time></p>
@@ -65,10 +71,7 @@
     <footer class="site-footer">
       <div class="wrap footer-row">
         <p>SEEN by CREOVA · <a href="https://creova.one" rel="noopener">creova.one</a></p>
-        <nav aria-label="Language">
-          <ul class="langs"><li><span aria-current="true" lang="en">English</span></li><li><a href="../fr/privacy/" lang="fr" hreflang="fr">Français</a></li><li><a href="../es/privacy/" lang="es" hreflang="es">Español</a></li></ul>
-        </nav>
-        <ul class="langs">
+        <ul class="footer-links">
           <li><a href="../terms/">Terms</a></li>
           <li><a href="../privacy/">Privacy</a></li>
         </ul>
