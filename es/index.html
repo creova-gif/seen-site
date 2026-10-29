@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>SEEN: Te ven en la app</title>
     <meta name="description" content="SEEN es un lugar para historias comunitarias en español, inglés y francés. Lee y escucha historias, sigue a sus creadores, explora colecciones y encuentra financiamiento para quienes cuentan historias." />
@@ -25,6 +25,7 @@
     <meta property="og:url" content="https://seen.creova.one/es/" />
     <link rel="preload" href="../fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="../styles.css" />
+    <script src="../site.js" defer></script>
   </head>
   <body>
     <a class="skip" href="#main">Saltar al contenido</a>
@@ -57,9 +58,10 @@
 
     <main id="main">
       <section class="band band--black hero" aria-labelledby="hero-title">
+        <div class="focus-lines" aria-hidden="true"></div>
         <div class="wrap hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">SEEN de CREOVA</p>
+            <p class="mono field">Nota de campo / 001</p>
             <h1 id="hero-title">Te <em>ven</em> en la app.</h1>
             <p class="lead">SEEN es un lugar para historias comunitarias en español, inglés y francés. Lee y escucha historias, sigue a quienes las cuentan, explora colecciones y encuentra financiamiento para quienes cuentan historias.</p>
             <p class="actions">
@@ -68,80 +70,273 @@
             </p>
             <p class="note">La demo usa historias y cuentas de ejemplo. Lo que creas en ella se queda en tu propio navegador.</p>
           </div>
-          <figure class="hero-figure">
-            <div class="rings" aria-hidden="true"></div>
-            <img src="../img/hero-portrait.jpg" alt="Dos personas posan juntas en un retrato de estudio ante un fondo claro, ambas sonriendo a la cámara." width="533" height="800" decoding="async" />
-          </figure>
+          <div class="hero-stage">
+            <div class="phone phone--back"><img src="../img/app-creators.jpg" alt="Pantalla Explore de la app SEEN, pestaña Creators, en inglés: tarjetas de creadores con iniciales y número de historias." width="508" height="1100" decoding="async" /></div>
+            <div class="phone phone--front"><img src="../img/app-home.jpg" alt="Pantalla For You de la app SEEN, en inglés: una historia destacada, Midnight Resonance de Kira Chen, con un botón Start reading." width="508" height="1100" decoding="async" /></div>
+            <div class="hero-mascot"><p class="bubble bubble--hero" aria-hidden="true">¡Adelante!</p><svg class="mascot mascot--hello" viewBox="0 0 220 244" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="iris1" cx="38%" cy="32%" r="78%"><stop offset="0" stop-color="#f3e8ff"/><stop offset=".42" stop-color="#c084fc"/><stop offset="1" stop-color="#5b21b6"/></radialGradient></defs>
+    <ellipse cx="110" cy="236" rx="56" ry="7" fill="#000" opacity=".4"/>
+    <ellipse cx="86" cy="214" rx="19" ry="11" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/>
+    <ellipse cx="134" cy="214" rx="19" ry="11" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/>
+    <path class="wave" d="M186 120 Q214 96 206 66" fill="none" stroke="#0b0b0c" stroke-width="16" stroke-linecap="round"/><path class="wave" d="M186 120 Q214 96 206 66" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round"/><circle class="wave" cx="206" cy="62" r="12" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/><path d="M34 128 Q14 150 24 172" fill="none" stroke="#0b0b0c" stroke-width="16" stroke-linecap="round"/><path d="M34 128 Q14 150 24 172" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="110" cy="112" r="86" fill="#fffdfa" stroke="#0b0b0c" stroke-width="6"/>
+    <path d="M30 96 Q40 44 98 30 Q58 54 52 112 Z" fill="#efe7ff" opacity=".8"/>
+    <g class="iris"><circle cx="110" cy="108" r="45" fill="url(#iris1)" stroke="#0b0b0c" stroke-width="5"/><circle cx="110" cy="108" r="19" fill="#12041f"/><circle cx="95" cy="92" r="11" fill="#fff"/><circle cx="127" cy="124" r="5" fill="#fff"/><path transform="translate(128 90) rotate(0) scale(0.7)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></g>
+    <ellipse cx="50" cy="146" rx="13" ry="7.5" fill="#ff8fb1" opacity=".75"/>
+    <ellipse cx="170" cy="146" rx="13" ry="7.5" fill="#ff8fb1" opacity=".75"/>
+    <path d="M158 40 q6 -9 12 -13 M173 53 q10 -6 18 -7 M183 70 q11 -2 19 3" fill="none" stroke="#0b0b0c" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M94 170 Q110 186 126 170" fill="none" stroke="#0b0b0c" stroke-width="5" stroke-linecap="round"/>
+    
+    </svg></div>
+            <svg class="spark spark--a" viewBox="-14 -14 28 28" width="34" height="34" aria-hidden="true" focusable="false"><path transform="translate(0 0) rotate(0) scale(1)" fill="#ffd166" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></svg><svg class="spark spark--b" viewBox="-14 -14 28 28" width="22" height="22" aria-hidden="true" focusable="false"><path transform="translate(0 0) rotate(0) scale(1)" fill="#c084fc" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></svg><svg class="spark spark--c" viewBox="-14 -14 28 28" width="28" height="28" aria-hidden="true" focusable="false"><path transform="translate(0 0) rotate(0) scale(1)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></svg>
+          </div>
         </div>
+        <ul class="wrap statusbar mono"><li>Demo abierta</li><li>Beta prevista para enero de 2027</li><li>Solo historias de ejemplo</li></ul>
       </section>
 
-      <section class="band tagline-band" aria-label="SEEN de CREOVA">
-        <div class="wrap"><p class="tagline">Donde viven las historias, donde respira la cultura.</p></div>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span>Historias</span><span>Creadores</span><span>Colecciones</span><span>Financiamiento</span><span>English</span><span>Français</span><span>Español</span></div><div class="marquee-group"><span>Historias</span><span>Creadores</span><span>Colecciones</span><span>Financiamiento</span><span>English</span><span>Français</span><span>Español</span></div></div></div>
+
+      <section class="band band--black idea" aria-labelledby="idea-title">
+        <div class="wrap idea-grid">
+          <div>
+            <p class="kicker mono">Punto de vista</p>
+            <h2 id="idea-title" class="display">No es otro feed. Es un lugar donde te ven.</h2>
+          </div>
+          <div class="idea-side">
+            <figure class="study"><svg class="study-art" viewBox="0 0 340 340" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round">
+      <circle cx="170" cy="170" r="150" stroke="rgba(255,255,255,.4)" stroke-width="1.2" stroke-dasharray="3 7"/>
+      <path d="M170 8 V332 M8 170 H332" stroke="rgba(255,255,255,.4)" stroke-width="1" stroke-dasharray="2 6"/>
+      <circle cx="170" cy="170" r="104" stroke="rgba(255,255,255,.9)" stroke-width="2.2"/>
+      <circle cx="170" cy="170" r="46" stroke="#c084fc" stroke-width="2.2"/>
+      <circle cx="170" cy="170" r="18" stroke="rgba(255,255,255,.9)" stroke-width="1.6"/>
+      <circle cx="154" cy="152" r="9" stroke="rgba(255,255,255,.9)" stroke-width="1.4" stroke-dasharray="2 4"/>
+      <path d="M222 80 L232 64 M250 103 L266 92 M268 134 L286 128" stroke="rgba(255,255,255,.9)" stroke-width="2.4"/>
+      <path d="M146 224 q24 16 48 0" stroke="rgba(255,255,255,.9)" stroke-width="2.2"/>
+      <ellipse cx="136" cy="318" rx="22" ry="9" stroke="rgba(255,255,255,.9)" stroke-width="2"/><ellipse cx="204" cy="318" rx="22" ry="9" stroke="rgba(255,255,255,.9)" stroke-width="2"/>
+      <path d="M66 170 H124 M216 170 H274" stroke="#c084fc" stroke-width="1.2" stroke-dasharray="2 4"/>
+      <path d="M66 62 H274" stroke="rgba(255,255,255,.4)" stroke-width="1"/><path d="M66 56 V68 M274 56 V68" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+      <path d="M300 66 V274" stroke="rgba(255,255,255,.4)" stroke-width="1"/><path d="M294 66 H306 M294 274 H306" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+    </g>
+    <g fill="rgba(255,255,255,.9)" font-size="9.5" letter-spacing="1.4" class="mono-svg">
+      <text x="170" y="50" text-anchor="middle" fill="rgba(255,255,255,.4)">&#216; 208</text>
+      <text x="318" y="174" text-anchor="middle" fill="rgba(255,255,255,.4)" transform="rotate(90 318 174)">&#216; 208</text>
+      <text x="170" y="236" text-anchor="middle" fill="#c084fc">IRIS</text>
+      
+    </g>
+    <path transform="translate(292 40) rotate(0) scale(0.9)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(40 296) rotate(0) scale(0.6)" fill="#c084fc" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></svg><figcaption class="mono">Estudio de forma 01 / El ojo</figcaption></figure>
+            <p>Empezamos por la historia: quién la cuenta, en qué idioma y quién puede escucharla.</p>
+            <p>SEEN es un producto de CREOVA en desarrollo. Esta página es una invitación a mirar de cerca, no una tienda ni una promesa.</p>
+          </div>
+        </div>
       </section>
 
       <section id="what" class="band band--black" aria-labelledby="what-title">
         <div class="wrap">
+          <p class="kicker mono">Tres formas de entrar</p>
           <h2 id="what-title">¿Qué es SEEN?</h2>
-          <div class="cards">
-            <article class="card"><h3>Historias en tres idiomas</h3><p>Lee o escucha mundos de historias en español, inglés y francés, y cambia el idioma de la app cuando quieras.</p></article>
-            <article class="card"><h3>Creadores y colecciones</h3><p>Sigue a creadores, guarda historias y explora colecciones reunidas en torno a un tema.</p></article>
-            <article class="card"><h3>Financiamiento para narradores</h3><p>Consulta programas de financiamiento canadienses para narradores, cada uno enlazado a la página oficial de la entidad, y lleva el control de tus solicitudes.</p></article>
+          <div class="panels">
+            <article class="mpanel mpanel--story">
+              <div class="paper"><div class="tone" aria-hidden="true"></div><svg class="spot spot--lang" viewBox="0 0 260 210" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(-6 80 57)"><path d="M28 22 H132 Q146 22 146 36 V78 Q146 92 132 92 H60 L36 114 L42 92 H28 Q14 92 14 78 V36 Q14 22 28 22 Z" fill="#fbbf24" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/><text x="80" y="67.2" text-anchor="middle" font-size="30" font-weight="800" fill="#0b0b0c" class="spot-text">Hello</text></g><g transform="rotate(5 181 97)"><path d="M126 62 H236 Q250 62 250 76 V118 Q250 132 236 132 H220 L238 154 L212 132 H126 Q112 132 112 118 V76 Q112 62 126 62 Z" fill="#c084fc" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/><text x="181" y="106.52" text-anchor="middle" font-size="28" font-weight="800" fill="#0b0b0c" class="spot-text">Bonjour</text></g><g transform="rotate(-3 92 162)"><path d="M44 132 H140 Q154 132 154 146 V178 Q154 192 140 192 H76 L52 214 L58 192 H44 Q30 192 30 178 V146 Q30 132 44 132 Z" fill="#e8f1ff" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/><text x="92" y="172.2" text-anchor="middle" font-size="30" font-weight="800" fill="#0b0b0c" class="spot-text">Hola</text></g>
+       <path transform="translate(236 36) rotate(0) scale(1.1)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(20 118) rotate(0) scale(0.7)" fill="#0b0b0c" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></svg></div>
+              <div class="caption"><h3>Historias en tres idiomas</h3><p>Lee o escucha mundos de historias en español, inglés y francés, y cambia el idioma de la app cuando quieras.</p></div>
+            </article>
+            <article class="mpanel mpanel--creator">
+              <div class="paper"><div class="tone" aria-hidden="true"></div><svg class="spot spot--create" viewBox="0 0 260 210" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(-16 130 130)"><rect x="82" y="46" width="96" height="124" rx="12" fill="#60a5fa" stroke="#0b0b0c" stroke-width="5"/><circle cx="130" cy="92" r="14" fill="#fff" stroke="#0b0b0c" stroke-width="4"/><path d="M102 150 Q130 116 158 150" fill="#fff" stroke="#0b0b0c" stroke-width="4"/></g>
+       <g transform="rotate(0 130 130)"><rect x="82" y="46" width="96" height="124" rx="12" fill="#fbbf24" stroke="#0b0b0c" stroke-width="5"/><path d="M130 76 l8 18 20 2 -15 13 5 20 -18 -10 -18 10 5 -20 -15 -13 20 -2 Z" fill="#fff" stroke="#0b0b0c" stroke-width="4" stroke-linejoin="round"/></g>
+       <g transform="rotate(16 130 130)"><rect x="82" y="46" width="96" height="124" rx="12" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/><path d="M130 138 C96 114 108 82 130 98 C152 82 164 114 130 138 Z" fill="#fff" stroke="#0b0b0c" stroke-width="4" stroke-linejoin="round"/></g>
+       <g transform="translate(176 188) rotate(-42)"><rect x="0" y="-11" width="26" height="22" rx="4" fill="#ff8fb1" stroke="#0b0b0c" stroke-width="5"/><rect x="26" y="-11" width="10" height="22" fill="#d4d4d8" stroke="#0b0b0c" stroke-width="5"/><rect x="36" y="-11" width="76" height="22" fill="#ffd166" stroke="#0b0b0c" stroke-width="5"/><path d="M48 -11 V11 M62 -11 V11" stroke="#0b0b0c" stroke-width="3" opacity=".5"/><path d="M112 -11 L146 0 L112 11 Z" fill="#f3d6a5" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/><path d="M134 -4 L146 0 L134 4 Z" fill="#0b0b0c"/></g>
+       <path transform="translate(34 40) rotate(0) scale(1.1)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(228 54) rotate(0) scale(0.8)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(214 30) rotate(0) scale(0.5)" fill="#fbbf24" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></svg></div>
+              <div class="caption"><h3>Creadores y colecciones</h3><p>Sigue a creadores, guarda historias y explora colecciones reunidas en torno a un tema.</p></div>
+            </article>
+            <article class="mpanel mpanel--funding">
+              <div class="paper"><div class="tone" aria-hidden="true"></div><svg class="spot spot--fund" viewBox="0 0 260 210" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><ellipse cx="130" cy="182" rx="62" ry="20" fill="#ffd166" stroke="#0b0b0c" stroke-width="5"/><rect x="68" y="166" width="124" height="16" fill="#ffd166"/><path d="M68 166 V182 M192 166 V182" stroke="#0b0b0c" stroke-width="5"/><ellipse cx="130" cy="166" rx="62" ry="20" fill="#ffd166" stroke="#0b0b0c" stroke-width="5"/><ellipse cx="130" cy="166" rx="40" ry="11" fill="none" stroke="#0b0b0c" stroke-width="3" opacity=".45"/><ellipse cx="130" cy="154" rx="62" ry="20" fill="#ffe29e" stroke="#0b0b0c" stroke-width="5"/><rect x="68" y="138" width="124" height="16" fill="#ffe29e"/><path d="M68 138 V154 M192 138 V154" stroke="#0b0b0c" stroke-width="5"/><ellipse cx="130" cy="138" rx="62" ry="20" fill="#ffe29e" stroke="#0b0b0c" stroke-width="5"/><ellipse cx="130" cy="138" rx="40" ry="11" fill="none" stroke="#0b0b0c" stroke-width="3" opacity=".45"/><ellipse cx="130" cy="126" rx="62" ry="20" fill="#ffd166" stroke="#0b0b0c" stroke-width="5"/><rect x="68" y="110" width="124" height="16" fill="#ffd166"/><path d="M68 110 V126 M192 110 V126" stroke="#0b0b0c" stroke-width="5"/><ellipse cx="130" cy="110" rx="62" ry="20" fill="#ffd166" stroke="#0b0b0c" stroke-width="5"/><ellipse cx="130" cy="110" rx="40" ry="11" fill="none" stroke="#0b0b0c" stroke-width="3" opacity=".45"/>
+     <path d="M130 94 C128 68 132 52 126 34" fill="none" stroke="#0b0b0c" stroke-width="13" stroke-linecap="round"/><path d="M130 94 C128 68 132 52 126 34" fill="none" stroke="#20c997" stroke-width="6" stroke-linecap="round"/>
+     <path d="M127 58 C98 62 80 44 78 22 C104 22 122 34 127 58 Z" fill="#20c997" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/><path d="M129 46 C158 46 178 30 182 8 C154 8 134 22 129 46 Z" fill="#5eead4" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/>
+     <path d="M127 58 C112 48 100 38 90 30 M129 46 C146 36 160 26 172 16" stroke="#0b0b0c" stroke-width="3" fill="none" opacity=".5"/>
+     <circle cx="38" cy="150" r="17" fill="#ffd166" stroke="#0b0b0c" stroke-width="5"/><path d="M38 141 v18 M31 150 h14" stroke="#0b0b0c" stroke-width="4" stroke-linecap="round"/><circle cx="224" cy="120" r="13" fill="#ffd166" stroke="#0b0b0c" stroke-width="5"/><path d="M224 113 v14 M217 120 h14" stroke="#0b0b0c" stroke-width="3.5" stroke-linecap="round"/>
+     <path transform="translate(212 56) rotate(0) scale(1)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(48 70) rotate(0) scale(0.7)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(236 168) rotate(0) scale(0.6)" fill="#fbbf24" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></svg></div>
+              <div class="caption"><h3>Financiamiento para narradores</h3><p>Descubre financiamiento pensado para narradores, todo en un solo lugar.</p></div>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section id="make" class="band band--elevated make" aria-labelledby="make-title" data-make>
+        <div class="wrap make-grid">
+          <div>
+            <p class="kicker mono">Haz tu SEEN</p>
+            <h2 id="make-title" class="display">Haz tu SEEN.</h2>
+            <p class="lead">Elige una opción por línea y llévate una idea de historia a la app. Tus elecciones se quedan en esta página.</p>
+            <div class="make-controls" data-controls hidden>
+              <fieldset><legend class="mono">Empieza con un sentimiento</legend><div class="opts"><label class="opt"><input type="radio" name="feeling" value="0" checked /><span>Calma</span></label><label class="opt"><input type="radio" name="feeling" value="1" /><span>Audacia</span></label><label class="opt"><input type="radio" name="feeling" value="2" /><span>Ternura</span></label></div></fieldset>
+              <fieldset><legend class="mono">Elige una forma</legend><div class="opts"><label class="opt"><input type="radio" name="form" value="0" checked /><span>Historia</span></label><label class="opt"><input type="radio" name="form" value="1" /><span>Canción</span></label><label class="opt"><input type="radio" name="form" value="2" /><span>Película</span></label></div></fieldset>
+              <fieldset><legend class="mono">Dilo en</legend><div class="opts"><label class="opt"><input type="radio" name="lang" value="0" /><span>English</span></label><label class="opt"><input type="radio" name="lang" value="1" /><span>Français</span></label><label class="opt"><input type="radio" name="lang" value="2" checked /><span>Español</span></label></div></fieldset>
+            </div>
+          </div>
+          <div class="make-card">
+            <p class="mono make-label">Tu SEEN <span data-tags>Calma · Historia · Español</span></p>
+            <p class="seed" data-output lang="es" aria-live="polite">Una historia sobre la única habitación de tu casa que nunca se pone ruidosa.</p>
+            <p class="note" data-fallback>Aquí tienes una para empezar.</p>
+            <p class="actions">
+              <button type="button" class="btn btn-ghost" data-copy data-done="Copiado" hidden>Copiar mi SEEN</button>
+              <a class="btn btn-primary" href="https://seen-sigma-eight.vercel.app" rel="noopener">Llévalo a la app</a>
+            </p>
+          </div>
+        </div>
+        <ul data-seeds hidden><li data-seed="en-0-0" lang="en">A story about the one room in your house that never gets loud.</li><li data-seed="en-0-1" lang="en">A song for the hour just before everyone wakes.</li><li data-seed="en-0-2" lang="en">A film that is only the light moving across one kitchen table.</li><li data-seed="en-1-0" lang="en">A story that begins with you saying the thing out loud.</li><li data-seed="en-1-1" lang="en">A song that takes up the whole street.</li><li data-seed="en-1-2" lang="en">A film whose first shot is the last thing anyone expected.</li><li data-seed="en-2-0" lang="en">A story about someone who remembers your name correctly.</li><li data-seed="en-2-1" lang="en">A song for the person who stayed.</li><li data-seed="en-2-2" lang="en">A film made of hands: cooking, mending, waving goodbye.</li><li data-seed="fr-0-0" lang="fr">Une histoire sur la seule pièce de la maison qui ne devient jamais bruyante.</li><li data-seed="fr-0-1" lang="fr">Une chanson pour l'heure juste avant que tout le monde se réveille.</li><li data-seed="fr-0-2" lang="fr">Un film qui n'est que la lumière qui traverse une table de cuisine.</li><li data-seed="fr-1-0" lang="fr">Une histoire qui commence par vous, qui dites la chose à voix haute.</li><li data-seed="fr-1-1" lang="fr">Une chanson qui prend toute la rue.</li><li data-seed="fr-1-2" lang="fr">Un film dont le premier plan est ce que personne n'attendait.</li><li data-seed="fr-2-0" lang="fr">Une histoire sur quelqu'un qui retient correctement votre nom.</li><li data-seed="fr-2-1" lang="fr">Une chanson pour la personne qui est restée.</li><li data-seed="fr-2-2" lang="fr">Un film fait de mains : qui cuisinent, qui réparent, qui disent au revoir.</li><li data-seed="es-0-0" lang="es">Una historia sobre la única habitación de tu casa que nunca se pone ruidosa.</li><li data-seed="es-0-1" lang="es">Una canción para la hora justo antes de que todos despierten.</li><li data-seed="es-0-2" lang="es">Una película que es solo la luz cruzando una mesa de cocina.</li><li data-seed="es-1-0" lang="es">Una historia que empieza contigo diciendo la cosa en voz alta.</li><li data-seed="es-1-1" lang="es">Una canción que ocupa toda la calle.</li><li data-seed="es-1-2" lang="es">Una película cuyo primer plano es lo que nadie esperaba.</li><li data-seed="es-2-0" lang="es">Una historia sobre alguien que recuerda bien tu nombre.</li><li data-seed="es-2-1" lang="es">Una canción para la persona que se quedó.</li><li data-seed="es-2-2" lang="es">Una película hecha de manos: cocinando, remendando, diciendo adiós.</li></ul>
+      </section>
+
+      <section class="band band--surface tour" aria-labelledby="tour-title">
+        <div class="wrap">
+          <p class="kicker mono">Dentro de la app</p>
+          <h2 id="tour-title">Echa un vistazo por dentro</h2>
+          <p class="lead">Un recorrido rápido por la demo de la app.</p>
+          <div class="shots">
+            <figure class="shot shot--1"><div class="phone "><img src="../img/app-home.jpg" alt="Pantalla For You de la app SEEN, en inglés: una historia destacada, Midnight Resonance de Kira Chen, con un botón Start reading." width="508" height="1100" loading="lazy" decoding="async" /></div><figcaption>Una historia destacada, en tu pantalla de inicio</figcaption></figure>
+            <figure class="shot shot--2"><div class="phone "><img src="../img/app-explore.jpg" alt="Pantalla Explore de la app SEEN, en inglés, con las pestañas Stories, Creators y Collections y una historia destacada." width="508" height="1100" loading="lazy" decoding="async" /></div><figcaption>Explora historias, creadores y colecciones</figcaption></figure>
+            <figure class="shot shot--3"><div class="phone "><img src="../img/app-creators.jpg" alt="Pantalla Explore de la app SEEN, pestaña Creators, en inglés: tarjetas de creadores con iniciales y número de historias." width="508" height="1100" loading="lazy" decoding="async" /></div><figcaption>Conoce a creadores y sus historias</figcaption></figure>
+          </div>
+          <p class="note">Pantallas de la demo de la app, que funciona con historias de ejemplo (interfaz en inglés).</p>
         </div>
       </section>
 
       <section id="creators" class="band band--elevated band--creator" aria-labelledby="creators-title">
         <div class="wrap split">
           <div>
+            <p class="kicker mono">Creadores</p>
             <h2 id="creators-title">Para creadores</h2>
             <p class="lead">Cuenta tu historia a tu manera.</p>
-            <p>Escribe y publica historias con descripciones de imágenes y avisos de contenido, para que más personas puedan participar. Tu crédito y tu consentimiento van primero.</p>
-            <div class="panel panel--accent">
-              <h3>Antes de abrir la beta, estamos trabajando en:</h3>
-              <ul><li>Permisos y créditos para todas las personas que trabajaron en una historia</li><li>Una forma de impugnar un crédito</li><li>Ajustes de privacidad que tú controlas</li><li>Denuncias y retirada de contenido que deba retirarse</li></ul>
+            <p>Comparte tus historias con quienes las van a querer. Tu crédito y tu consentimiento van primero.</p>
+            <div class="quest-card">
+              <h3>Hacia lo que estamos construyendo:</h3>
+              <ul><li>Un crédito que acompaña tu trabajo</li><li>Control sobre quién ve qué</li><li>Un lugar respetuoso para compartir</li></ul>
             </div>
           </div>
-          <figure class="photo"><img src="../img/creators-laptop.jpg" alt="Una mujer se ríe al levantar la vista de su portátil en una sala comunitaria con estanterías de libros al fondo." width="960" height="639" loading="lazy" decoding="async" /></figure>
+          <figure class="polaroid polaroid--a">
+            <span class="tape" aria-hidden="true"></span>
+            <img src="../img/creators-laptop.jpg" alt="Una mujer se ríe al levantar la vista de su portátil en una sala comunitaria con estanterías de libros al fondo." width="960" height="639" loading="lazy" decoding="async" />
+            <div class="figure-mascot"><p class="bubble " aria-hidden="true">Cuéntala a tu manera.</p><svg class="mascot mascot--read" viewBox="0 0 220 244" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="iris2" cx="38%" cy="32%" r="78%"><stop offset="0" stop-color="#f3e8ff"/><stop offset=".42" stop-color="#c084fc"/><stop offset="1" stop-color="#5b21b6"/></radialGradient></defs>
+    <ellipse cx="110" cy="236" rx="56" ry="7" fill="#000" opacity=".4"/>
+    <ellipse cx="86" cy="214" rx="19" ry="11" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/>
+    <ellipse cx="134" cy="214" rx="19" ry="11" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/>
+    
+    <circle cx="110" cy="112" r="86" fill="#fffdfa" stroke="#0b0b0c" stroke-width="6"/>
+    <path d="M30 96 Q40 44 98 30 Q58 54 52 112 Z" fill="#efe7ff" opacity=".8"/>
+    <g class="iris" transform="translate(-12 14)"><circle cx="110" cy="108" r="43" fill="url(#iris2)" stroke="#0b0b0c" stroke-width="5"/><circle cx="110" cy="108" r="18" fill="#12041f"/><circle cx="96" cy="94" r="10" fill="#fff"/><circle cx="126" cy="122" r="4.5" fill="#fff"/></g>
+    <ellipse cx="50" cy="146" rx="13" ry="7.5" fill="#ff8fb1" opacity=".75"/>
+    <ellipse cx="170" cy="146" rx="13" ry="7.5" fill="#ff8fb1" opacity=".75"/>
+    <path d="M158 40 q6 -9 12 -13 M173 53 q10 -6 18 -7 M183 70 q11 -2 19 3" fill="none" stroke="#0b0b0c" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M98 172 Q110 178 122 172" fill="none" stroke="#0b0b0c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M40 150 Q50 190 86 196" fill="none" stroke="#0b0b0c" stroke-width="16" stroke-linecap="round"/><path d="M40 150 Q50 190 86 196" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round"/><path d="M180 150 Q170 190 134 196" fill="none" stroke="#0b0b0c" stroke-width="16" stroke-linecap="round"/><path d="M180 150 Q170 190 134 196" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round"/>
+    <g transform="translate(110 198)"><path d="M-44 -6 L0 -14 L44 -6 L44 20 L0 12 L-44 20 Z" fill="#fbbf24" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/><path d="M0 -14 L0 12" stroke="#0b0b0c" stroke-width="4"/><path d="M-34 0 L-8 -4 M-34 8 L-8 4 M8 -4 L34 0 M8 4 L34 8" stroke="#0b0b0c" stroke-width="3" stroke-linecap="round" opacity=".55"/></g></svg></div>
+          </figure>
         </div>
       </section>
 
       <section id="viewers" class="band band--surface band--story" aria-labelledby="viewers-title">
         <div class="wrap split split--flip">
           <div>
+            <p class="kicker mono">Lectores</p>
             <h2 id="viewers-title">Para lectores</h2>
             <p class="lead">Abre una historia y empieza a leer o escuchar.</p>
             <p>SEEN funciona en teléfonos pequeños y está pensada con la accesibilidad en mente.</p>
-            <ul><li>Interfaz en español, inglés y francés</li><li>Una opción de texto más grande</li><li>Control de la velocidad de reproducción</li><li>Herramientas para denunciar algo que no está bien</li></ul>
+            <ul class="chips"><li>Interfaz en español, inglés y francés</li><li>Una opción de texto más grande</li><li>Control de la velocidad de reproducción</li></ul>
           </div>
-          <figure class="photo"><img src="../img/viewers-chess.jpg" alt="Dos personas conversan junto a un tablero de ajedrez en una sala comunitaria con estanterías llenas de libros." width="960" height="639" loading="lazy" decoding="async" /></figure>
+          <figure class="polaroid polaroid--b">
+            <span class="tape" aria-hidden="true"></span>
+            <img src="../img/viewers-chess.jpg" alt="Dos personas conversan junto a un tablero de ajedrez en una sala comunitaria con estanterías llenas de libros." width="960" height="639" loading="lazy" decoding="async" />
+            <div class="figure-mascot figure-mascot--left"><p class="bubble " aria-hidden="true">¡Ooh! ¿Qué es esta?</p><svg class="mascot mascot--wow" viewBox="0 0 220 244" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="iris3" cx="38%" cy="32%" r="78%"><stop offset="0" stop-color="#f3e8ff"/><stop offset=".42" stop-color="#c084fc"/><stop offset="1" stop-color="#5b21b6"/></radialGradient></defs>
+    <ellipse cx="110" cy="236" rx="56" ry="7" fill="#000" opacity=".4"/>
+    <ellipse cx="86" cy="214" rx="19" ry="11" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/>
+    <ellipse cx="134" cy="214" rx="19" ry="11" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/>
+    <path d="M34 120 Q8 100 16 70" fill="none" stroke="#0b0b0c" stroke-width="16" stroke-linecap="round"/><path d="M34 120 Q8 100 16 70" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round"/><path d="M186 120 Q212 100 204 70" fill="none" stroke="#0b0b0c" stroke-width="16" stroke-linecap="round"/><path d="M186 120 Q212 100 204 70" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="110" cy="112" r="86" fill="#fffdfa" stroke="#0b0b0c" stroke-width="6"/>
+    <path d="M30 96 Q40 44 98 30 Q58 54 52 112 Z" fill="#efe7ff" opacity=".8"/>
+    <g class="iris"><circle cx="110" cy="108" r="50" fill="url(#iris3)" stroke="#0b0b0c" stroke-width="5"/><path transform="translate(110 108) rotate(0) scale(2.1)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(84 84) rotate(0) scale(0.8)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(138 132) rotate(0) scale(0.6)" fill="#fff" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/></g>
+    <ellipse cx="50" cy="146" rx="13" ry="7.5" fill="#ff8fb1" opacity=".75"/>
+    <ellipse cx="170" cy="146" rx="13" ry="7.5" fill="#ff8fb1" opacity=".75"/>
+    <path d="M158 40 q6 -9 12 -13 M173 53 q10 -6 18 -7 M183 70 q11 -2 19 3" fill="none" stroke="#0b0b0c" stroke-width="5.5" stroke-linecap="round"/>
+    <ellipse cx="110" cy="174" rx="8" ry="10" fill="#5b1a2e" stroke="#0b0b0c" stroke-width="4"/>
+    
+    </svg></div>
+          </figure>
         </div>
       </section>
 
       <section id="beta" class="band band--black" aria-labelledby="beta-title">
         <div class="wrap">
+          <p class="kicker mono">Dónde estamos</p>
           <h2 id="beta-title">Estado de la beta</h2>
-          <div class="beta-grid">
-            <div class="panel panel--now">
+          <div class="quest">
+            <div class="stage stage--now">
+              <span class="ribbon">Ahora</span>
               <h3><span class="live-dot" aria-hidden="true"></span>Hoy</h3>
               <p>La demo está abierta para probar. Funciona con historias y cuentas de ejemplo, y todo lo que haces se queda en tu propio navegador.</p>
               <p class="actions"><a class="btn btn-primary" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a></p>
             </div>
-            <div class="panel panel--plan">
+            <div class="trail" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="stage stage--next">
+              <span class="ribbon ribbon--next">Después</span>
               <h3>Previsto: beta 1, enero de 2027 (fecha por confirmar)</h3>
-              <ul><li>Cuentas que funcionan en todos tus dispositivos</li><li>Navegar sin cuenta (limitado)</li><li>Publicación para creadores</li><li>Transcripciones que los creadores pueden editar</li></ul>
+              <ul><li>Cuentas reales, en todos tus dispositivos</li><li>Herramientas para que los creadores publiquen su trabajo</li></ul>
             </div>
           </div>
           <p class="note">Las fechas y el alcance pueden cambiar. Actualizaremos esta página cuando eso ocurra.</p>
         </div>
       </section>
 
-      <section id="about" class="band band--surface" aria-labelledby="about-title">
+      <section class="band band--surface faq" aria-labelledby="faq-title">
+        <div class="wrap faq-grid">
+          <div>
+            <p class="kicker mono">Bueno saber</p>
+            <h2 id="faq-title" class="display">Unas cuantas respuestas honestas.</h2>
+          </div>
+          <div class="faq-list">
+            <details><summary>¿Puedo probar SEEN ahora?</summary><p>Sí. La demo está abierta. Funciona con historias y cuentas de ejemplo, y lo que creas se queda en tu propio navegador.</p></details>
+            <details><summary>¿Cuándo abre la beta?</summary><p>Planeamos la beta 1 para enero de 2027. La fecha está por confirmar y actualizaremos esta página.</p></details>
+            <details><summary>¿SEEN es solo en inglés?</summary><p>No. La app funciona en español, inglés y francés, igual que este sitio.</p></details>
+            <details><summary>¿Quién hace SEEN?</summary><p>CREOVA, un estudio de narración cultural en Ontario.</p></details>
+            <details><summary>¿Podré compartir mis propias historias?</summary><p>Las herramientas para creadores forman parte del plan de la beta. Diremos más cuando estén listas.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--black closer" aria-labelledby="closer-title">
+        <div class="wrap closer-grid">
+          <figure class="arch">
+            <img src="../img/hero-portrait.jpg" alt="Dos personas posan juntas en un retrato de estudio ante un fondo claro, ambas sonriendo a la cámara." width="533" height="800" loading="lazy" decoding="async" />
+            <span class="arch-burst" aria-hidden="true"><svg class="burst" viewBox="0 0 200 200" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><polygon points="196.0,100.0 160.4,113.8 186.5,141.7 148.5,138.7 159.9,175.1 126.9,155.9 121.4,193.6 100.0,162.0 78.6,193.6 73.1,155.9 40.1,175.1 51.5,138.7 13.5,141.7 39.6,113.8 4.0,100.0 39.6,86.2 13.5,58.3 51.5,61.3 40.1,24.9 73.1,44.1 78.6,6.4 100.0,38.0 121.4,6.4 126.9,44.1 159.9,24.9 148.5,61.3 186.5,58.3 160.4,86.2" fill="#c084fc" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/></svg></span>
+          </figure>
+          <div class="closer-copy">
+            <div class="figure-mascot figure-mascot--inline"><p class="bubble " aria-hidden="true">¡Nos vemos dentro!</p><svg class="mascot mascot--joy" viewBox="0 0 220 244" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="iris4" cx="38%" cy="32%" r="78%"><stop offset="0" stop-color="#f3e8ff"/><stop offset=".42" stop-color="#c084fc"/><stop offset="1" stop-color="#5b21b6"/></radialGradient></defs>
+    <ellipse cx="110" cy="236" rx="56" ry="7" fill="#000" opacity=".4"/>
+    <ellipse cx="86" cy="214" rx="19" ry="11" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/>
+    <ellipse cx="134" cy="214" rx="19" ry="11" fill="#c084fc" stroke="#0b0b0c" stroke-width="5"/>
+    <path d="M34 128 Q8 124 14 96" fill="none" stroke="#0b0b0c" stroke-width="16" stroke-linecap="round"/><path d="M34 128 Q8 124 14 96" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round"/><path d="M186 128 Q212 124 206 96" fill="none" stroke="#0b0b0c" stroke-width="16" stroke-linecap="round"/><path d="M186 128 Q212 124 206 96" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="110" cy="112" r="86" fill="#fffdfa" stroke="#0b0b0c" stroke-width="6"/>
+    <path d="M30 96 Q40 44 98 30 Q58 54 52 112 Z" fill="#efe7ff" opacity=".8"/>
+    <path d="M58 118 Q110 56 162 118" fill="none" stroke="#0b0b0c" stroke-width="9" stroke-linecap="round"/><path d="M70 112 Q110 72 150 112" fill="none" stroke="#c084fc" stroke-width="5" stroke-linecap="round"/><path transform="translate(150 78) rotate(0) scale(0.8)" fill="#fbbf24" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/><path transform="translate(70 82) rotate(0) scale(0.6)" fill="#c084fc" d="M0 -12 C1.6 -4.5 4.5 -1.6 12 0 C4.5 1.6 1.6 4.5 0 12 C-1.6 4.5 -4.5 1.6 -12 0 C-4.5 -1.6 -1.6 -4.5 0 -12Z"/>
+    <ellipse cx="50" cy="146" rx="13" ry="7.5" fill="#ff8fb1" opacity=".75"/>
+    <ellipse cx="170" cy="146" rx="13" ry="7.5" fill="#ff8fb1" opacity=".75"/>
+    <path d="M158 40 q6 -9 12 -13 M173 53 q10 -6 18 -7 M183 70 q11 -2 19 3" fill="none" stroke="#0b0b0c" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M88 158 Q110 196 132 158 Z" fill="#5b1a2e" stroke="#0b0b0c" stroke-width="5" stroke-linejoin="round"/><path d="M98 176 Q110 186 122 176" fill="#ff8fb1" stroke="none"/>
+    
+    </svg></div>
+            <h2 id="closer-title">¿Quieres que te vean?</h2>
+            <p class="lead">Abre la demo y echa un vistazo.</p>
+            <p class="actions"><a class="btn btn-primary btn-big" href="https://seen-sigma-eight.vercel.app" rel="noopener">Probar la demo</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="band band--surface about" aria-labelledby="about-title">
         <div class="wrap">
           <h2 id="about-title">Sobre CREOVA</h2>
           <p class="lead">SEEN lo crea CREOVA, el estudio detrás de herramientas para trabajadores culturales que se niegan a sacrificar la integridad de sus relatos por el favor de los algoritmos.</p>
           <p class="actions"><a class="btn btn-ghost" href="https://creova.one" rel="noopener">Visitar creova.one</a></p>
           <p class="note">Fotografías del trabajo comunitario y de eventos de CREOVA.</p>
         </div>
+        <div class="giant" aria-hidden="true">SEEN</div>
+        <p class="wrap mono giant-note">En desarrollo · Demo abierta · © 2026 CREOVA</p>
       </section>
     </main>
 
